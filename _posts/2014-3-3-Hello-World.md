@@ -60,7 +60,7 @@ docker run -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MO
 
 [_config.yml]({{ site.baseurl }}/images/44.png)
 
-Here, the container with the name 21BCP335-express is configured to connect the MongoDB Database with the Frontend of the project in Docker. The container will run on port 8081. Environment variables such as Username and Password of the MongoDB are passed to access the Database, along with the container name of the MongoDB in the Server Environment variable. The container will be running on the same network as the previous container.
+Here, the container with the name 21BCP295-express is configured to connect the MongoDB Database with the Frontend of the project in Docker. The container will run on port 8081. Environment variables such as Username and Password of the MongoDB are passed to access the Database, along with the container name of the MongoDB in the Server Environment variable. The container will be running on the same network as the previous container.
 
 
 Accessing the Frontend and Creating Databases
