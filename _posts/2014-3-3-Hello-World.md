@@ -75,3 +75,41 @@ Navigate to the server.js file within the project directory. Replace the values 
 [_config.yml]({{ site.baseurl }}/images/66.png)
 This step ensures that the server connects to the MongoDB database correctly. It replaces the previous URLs with the Docker-specific URL, allowing seamless integration with the MongoDB container running in Docker.
 
+
+Updating the Dockerfile
+Next, delete the existing Dockerfile provided in the project. Then, create a new Dockerfile inside the app folder of the project using the following commands
+
+
+FROM node
+WORKDIR /app
+COPY . .
+ENV MONGO_DB_USERNAME=admin
+ENV MONGO_DB_PWD=password
+RUN npm install
+EXPOSE 3000
+CMD ["node", "server.js"]
+
+[_config.yml]({{ site.baseurl }}/images/77.png)
+
+Building and Running the Docker Image
+Open the Command Prompt (CMD) terminal inside the app folder of the project. Then, run the following command:
+
+docker build -t 21BCP335-project .
+
+[_config.yml]({{ site.baseurl }}/images/88.png)
+The execution of the above command will generate a Docker Image with name 21BCP335-project and it will take some time for it. After the Image is created we need to Run it as a Docker Container.
+
+
+Running the Docker Image as a Container
+To run the Docker Image as a Docker Container, execute the following command:
+
+docker run -d -p 3000:3000 --network=mongo-network --name=21BCP335-project 21BCP335-project
+[_config.yml]({{ site.baseurl }}/images/99.png)
+Accessing the Webpage
+Now, open the following link in your web browser: localhost:3000. You will be able to view the running webpage.
+
+[_config.yml]({{ site.baseurl }}/images/1010.png)
+
+Congratulations! You have successfully deployed a Three-Tier Application using Docker. Feel free to explore further and customize your project. Happy coding!
+
+Written on April 23, 2024
