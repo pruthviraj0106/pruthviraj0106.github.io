@@ -94,16 +94,16 @@ CMD ["node", "server.js"]
 Building and Running the Docker Image
 Open the Command Prompt (CMD) terminal inside the app folder of the project. Then, run the following command:
 
-docker build -t 21BCP335-project .
+docker build -t 21BCP295-project .
 
 [_config.yml]({{ site.baseurl }}/images/88.png)
-The execution of the above command will generate a Docker Image with name 21BCP335-project and it will take some time for it. After the Image is created we need to Run it as a Docker Container.
+The execution of the above command will generate a Docker Image with name 21BCP295-project and it will take some time for it. After the Image is created we need to Run it as a Docker Container.
 
 
 Running the Docker Image as a Container
 To run the Docker Image as a Docker Container, execute the following command:
 
-docker run -d -p 3000:3000 --network=mongo-network --name=21BCP335-project 21BCP335-project
+docker run -d -p 3000:3000 --network=mongo-network --name=21BCP295-project 21BCP295-project
 [_config.yml]({{ site.baseurl }}/images/99.png)
 Accessing the Webpage
 Now, open the following link in your web browser: localhost:3000. You will be able to view the running webpage.
